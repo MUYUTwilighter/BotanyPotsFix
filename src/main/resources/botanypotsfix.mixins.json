@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "cool.muyucloud.botanypotsfix.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BlockEntityBotanyPotMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
