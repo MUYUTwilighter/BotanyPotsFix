@@ -45,6 +45,8 @@ dependencies {
     modImplementation "curse.maven:bookshelf-228525:5423988"
     // Botany Pots
     modImplementation "curse.maven:botany-pots-353928:5586280"
+    // Botany Pots Tiers
+    modImplementation "curse.maven:botany-pots-tiers-526754:4926014"
 }
 
 processResources {
