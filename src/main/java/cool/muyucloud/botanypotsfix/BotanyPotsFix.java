@@ -1,8 +1,6 @@
 package cool.muyucloud.botanypotsfix;
 
-import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.loader.api.FabricLoader;
 
 import java.util.logging.Logger;
 
@@ -11,8 +9,8 @@ public class BotanyPotsFix implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        if (FabricLoader.getInstance().getEnvironmentType() == EnvType.SERVER) {
-            LOGGER.warning("This is a client mod, running on server is ineffective.");
-        }
+        LOGGER.info("Ready to optimize Botany Pots!");
+        LOGGER.info("This mod is designed to fix issue #421 of Botany Pots, made by MUYU_Twilighter");
+        LOGGER.info("The fix might be a part of Botany Pots in the future. At that time, this mod is no longer needed.");
     }
 }

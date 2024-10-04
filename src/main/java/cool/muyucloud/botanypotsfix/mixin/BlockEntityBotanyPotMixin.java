@@ -29,11 +29,6 @@ public abstract class BlockEntityBotanyPotMixin extends WorldlyInventoryBlockEnt
      * */
     @Redirect(method = "load", at = @At(value = "INVOKE", target = "Lnet/darkhax/bookshelf/api/block/entity/WorldlyInventoryBlockEntity;load(Lnet/minecraft/nbt/CompoundTag;)V"))
     public void redirectLoad(WorldlyInventoryBlockEntity<BotanyPotContainer> instance, CompoundTag compoundTag) {
-        // Always load if we are on the server
-        if (this.getLevel() != null && !this.getLevel().isClientSide()) {
-            super.load(compoundTag);
-            return;
-        }
         // Does not contain inventory tag, return in case of NPE
         if (!compoundTag.contains("Inventory")) {
             return;

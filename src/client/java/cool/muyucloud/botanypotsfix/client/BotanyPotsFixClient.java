@@ -9,6 +9,6 @@ public class BotanyPotsFixClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        LOGGER.info("Ready to optimize Botany Pots!");
+
     }
 }
