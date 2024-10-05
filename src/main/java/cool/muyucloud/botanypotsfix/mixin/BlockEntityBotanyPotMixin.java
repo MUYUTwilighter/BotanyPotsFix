@@ -16,19 +16,21 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(BlockEntityBotanyPot.class)
 public abstract class BlockEntityBotanyPotMixin extends WorldlyInventoryBlockEntity<BotanyPotContainer> {
+
     public BlockEntityBotanyPotMixin(BlockEntityType type, BlockPos pos, BlockState state) {
         super(type, pos, state);
     }
 
-    /** Only load super if crops and soils are any different,
+    /**
+     * Only load super if crops and soils are any different,
      * indicating a change should be done on renderer.<br/>
      * Client just need the crop and soil stacks to render BE,
      * see {@link net.darkhax.botanypots.block.BotanyPotRenderer}.<br/>
      * The product stacks are only needed on Pot UI,
      * but data are synced in {@link BlockEntityBotanyPot#createMenu(int, Inventory)} invoked on server side
-     * */
+     */
     @Redirect(method = "load", at = @At(value = "INVOKE", target = "Lnet/darkhax/bookshelf/api/block/entity/WorldlyInventoryBlockEntity;load(Lnet/minecraft/nbt/CompoundTag;)V"))
-    public void redirectLoad(WorldlyInventoryBlockEntity<BotanyPotContainer> instance, CompoundTag compoundTag) {
+    private void redirectLoad(WorldlyInventoryBlockEntity<BotanyPotContainer> instance, CompoundTag compoundTag) {
         // Does not contain inventory tag, return in case of NPE
         if (!compoundTag.contains("Inventory")) {
             return;

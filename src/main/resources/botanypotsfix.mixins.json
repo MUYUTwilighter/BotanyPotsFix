@@ -4,8 +4,11 @@
   "package": "cool.muyucloud.botanypotsfix.mixin",
   "compatibilityLevel": "JAVA_17",
   "refmap": "botanypotsfix.refmap.json",
+  "plugin": "cool.muyucloud.botanypotsfix.BotanyPotsFixMixinPlugin",
   "mixins": [
-    "BlockEntityBotanyPotMixin"
+    "BlockEntityBotanyPotMixin",
+    "BotanyPotContainerMixin",
+    "TieredBotanyPotContainerMixin"
   ],
   "client": [
   ],
