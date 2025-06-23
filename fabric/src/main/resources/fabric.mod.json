@@ -3,16 +3,16 @@
   "id": "botanypotsfix",
   "version": "${version}",
   "name": "Botany Pots Fix",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Reduce lag caused by botany pots container by reducing unnecessary recipe rescanning.",
   "authors": [
-    "Me!"
+    "MUYU_Twilighter"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/MUYUTwilighter/BotanyPotsFix",
+    "sources": "https://github.com/MUYUTwilighter/BotanyPotsFix"
   },
   "license": "MIT",
-  "icon": "assets/botanypotsfix/icon.png",
+  "icon": "logo.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -28,8 +28,5 @@
     "java": ">=17",
     "architectury": "*",
     "botanypots": "*"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }

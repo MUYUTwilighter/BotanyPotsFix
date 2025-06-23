@@ -1,7 +1,7 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
-#issueTrackerURL = ""
-license = "Insert License Here"
+loaderVersion = "*"
+issueTrackerURL = "https://github.com/MUYUTwilighter/BotanyPotsFix"
+license = "MIT"
 
 [[mods]]
 modId = "botanypotsfix"
@@ -11,25 +11,33 @@ authors = "MUYU_Twilighter"
 description = '''
 Reduce lag caused by botany pots container by reducing unnecessary recipe rescanning.
 '''
-#logoFile = ""
+logoFile = "logo.png"
+logoBlur = false
 
 [[dependencies.botanypotsfix]]
 modId = "forge"
 mandatory = true
-versionRange = "[47,)"
+versionRange = "*"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.botanypotsfix]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.20.1,)"
+versionRange = "[1.20,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.botanypotsfix]]
 modId = "architectury"
 mandatory = true
-versionRange = "[9.2.14,)"
+versionRange = "*"
 ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.botanypotsfix]]
+modId = "botanypots"
+mandatory = true
+versionRange = "*"
+ordering = "NONE"
 side = "BOTH"
