@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "cool/muyucloud/botanypotsfix/mixin/MinecraftServerMixin": {
+      "reloadResources": "Lnet/minecraft/server/MinecraftServer;method_29439(Ljava/util/Collection;)Ljava/util/concurrent/CompletableFuture;"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "cool/muyucloud/botanypotsfix/mixin/MinecraftServerMixin": {
+        "reloadResources": "Lnet/minecraft/server/MinecraftServer;method_29439(Ljava/util/Collection;)Ljava/util/concurrent/CompletableFuture;"
+      }
+    }
+  }
+}
